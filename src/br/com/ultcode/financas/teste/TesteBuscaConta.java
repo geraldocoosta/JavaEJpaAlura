@@ -40,6 +40,7 @@ public class TesteBuscaConta {
 		 */
 
 		conta.setBanco("Itau");
+		conta.setBanco("Rodolfo");
 
 		/*
 		 * Ao executarmos, vemos que a JPA fez um update no banco, e sim, isso é
