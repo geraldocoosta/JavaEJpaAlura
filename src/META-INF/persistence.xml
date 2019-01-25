@@ -10,6 +10,8 @@
 		<!-- Aqui são listadas todas as entidades -->
 		<class>br.com.ultcode.financas.modelo.Conta</class>
 		<class>br.com.ultcode.financas.modelo.Movimentacao</class>
+		<class>br.com.ultcode.financas.modelo.Categoria</class>
+		<class>br.com.ultcode.financas.modelo.Cliente</class>
 		<properties>
 			<!-- Propriedades JDBC -->
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />

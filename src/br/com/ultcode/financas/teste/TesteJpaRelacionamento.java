@@ -38,7 +38,6 @@ public class TesteJpaRelacionamento {
 		em.persist(conta);
 		em.persist(mov);
 		
-		
 		em.getTransaction().commit();
 		em.close();
 	}
