@@ -1,9 +1,12 @@
 package br.com.ultcode.financas.modelo;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 //Dando dica pro hibernate que ele vai precisar criar tabela para objetos dessa classe
 // que vamos precisar administrar objetos dessa clasee
@@ -24,6 +27,17 @@ public class Conta {
 	private String numero;
 	private String banco;
 	private String agencia;
+
+	@OneToMany(mappedBy = "conta")
+	private List<Movimentacao> movimentacoes;
+
+	public List<Movimentacao> getMovimentacoes() {
+		return movimentacoes;
+	}
+
+	public void setMovimentacoes(List<Movimentacao> movimentacoes) {
+		this.movimentacoes = movimentacoes;
+	}
 
 	public Integer getId() {
 		return id;
