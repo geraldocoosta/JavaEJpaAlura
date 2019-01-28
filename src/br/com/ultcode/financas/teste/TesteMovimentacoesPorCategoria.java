@@ -3,7 +3,7 @@ package br.com.ultcode.financas.teste;
 import java.util.List;
 
 import javax.persistence.EntityManager;
-import javax.persistence.Query;
+import javax.persistence.TypedQuery;
 
 import br.com.ultcode.financas.modelo.Categoria;
 import br.com.ultcode.financas.modelo.Movimentacao;
@@ -26,7 +26,11 @@ public class TesteMovimentacoesPorCategoria {
 		categoria.setId(2);
 
 		String jpql = "select m from Movimentacao m join m.categorias c where c = :pCategoria";
-		Query query = em.createQuery(jpql);
+		/*
+		 * Testando esse TypedQuery para tirar o warning, existe uma api criteria tbm,
+		 * procurar mais
+		 */
+		TypedQuery<Movimentacao> query = em.createQuery(jpql, Movimentacao.class);
 		query.setParameter("pCategoria", categoria);
 
 		List<Movimentacao> movimentacoes = query.getResultList();
