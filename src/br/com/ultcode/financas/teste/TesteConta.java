@@ -54,7 +54,6 @@ public class TesteConta {
 		em.getTransaction().begin();
 		em.persist(conta);
 		
-		conta.setTitular("Danilo");
 		em.getTransaction().commit();
 
 		/*
