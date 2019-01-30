@@ -34,8 +34,10 @@ public class TesteMovimentacaoComCategoria {
 
 		Movimentacao mov2 = new Movimentacao();
 		Calendar dataAmanha = Calendar.getInstance();
+		
 		dataAmanha.add(Calendar.DAY_OF_MONTH, 1);
 		mov2.setData(dataAmanha);
+		
 		mov2.setDescricao("Viagem a rj");
 		mov2.setTipo(TipoMovimentacao.SAIDA);
 		mov2.setValor(new BigDecimal("300"));
